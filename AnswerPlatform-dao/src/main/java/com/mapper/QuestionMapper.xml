@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mapper.QuestionMapper">
+	<select id="getQuestion" parameterType="Integer" resultType="com.pojo.QuestionDepository">
+		SELECT * FROM questiondepository
+WHERE id>=(((SELECT MAX(id) FROM questiondepository)-(SELECT MIN(id) FROM questiondepository))*RAND()+(SELECT MIN(id) FROM questiondepository)) LIMIT #{value};
+	</select>
+	<select id="findOneQuestion" parameterType="com.pojo.QuestionDepository" resultType="com.pojo.QuestionDepository">
+		select * from questiondepository
+		where question=#{question} and answer=#{answer}
+	</select>
+	<insert id="insertQuestion" parameterType="com.pojo.QuestionDepository">
+		insert into questiondepository(question,answer) values
+		(#{question},#{answer})
+	</insert>
+</mapper>

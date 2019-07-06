@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../js/jquery-1.6.4.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<form action="/getQuestion" method="post">
+					<button class="btn btn-success">练习</button>
+				</form>
+				<p></p>
+				<form action="/getExamQuestion" method="post">
+					<button class="btn btn-success">考试</button>
+				</form>
+				<p></p>
+				<button id="return" class="btn btn-info">返回</button>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<script>
+		$("#return").click(
+			function(){
+				window.location.href="MainIndex.html";
+			}		
+		);	
+	</script>
+</body>
+</html>

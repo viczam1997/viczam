@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>总览</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../js/jquery-1.6.4.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/bootstrap.css">
+<script type="text/javascript" src="../js/bootstrap.js"></script>
+<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<div class="containner">
+		<div class="row">
+			<div class="col-md-4"></div>
+			<div class="col-md-4">
+				<button id="teacher" class="btn btn-success">
+					教师端
+				</button>
+				<button id="student" class="btn btn-info">
+					学生端
+				</button>
+			</div>
+			<div class="col-md-4"></div>
+		</div>
+	</div>
+	<script>
+		$("#teacher").click(
+				function(){
+					window.location.href = "MainIndex.html";	
+				}
+		);
+		$("#student").click(
+				function(){
+					window.location.href = "studentIndex.html";	
+				}
+		);
+	</script>
+</body>
+</html>
