@@ -15,6 +15,10 @@ public class TEst {
 		List<QuestionDepository> findall = testMapperImpl.findall();
 		for (QuestionDepository questionDepository : findall) {
 			System.out.println(questionDepository);
+			System.out.println(222);
+			System.out.println(111);
+			System.out.println(333);
+			System.out.println(444);
 		}
 	}
 }
